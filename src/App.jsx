@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './App.css';
-import logo from './DeloitteLogo.png';
 
 function App() {
   const [activeTab, setActiveTab] = useState('Response Accuracy');
@@ -20,13 +19,69 @@ function App() {
   
   // Sample data - in a real app, this would come from an API or data source
   const models = [
-    { id: 1, name: 'DeepEval', type: 'diamond', accuracyScore: 92.8, precisionScore: 90.3, recallScore: 89.5 },
-    { id: 2, name: 'Ragas', type: 'circle', accuracyScore: 91.9, precisionScore: 89.6, recallScore: 88.2 },
-    { id: 3, name: 'MLFlow', type: 'circle', accuracyScore: 91.3, precisionScore: 88.3, recallScore: 87.5 },
-    { id: 4, name: 'TruLens', type: 'circle', accuracyScore: 90.7, precisionScore: 87.1, recallScore: 86.9 },
-    { id: 5, name: 'Arize AI Phoenix', type: 'diamond', accuracyScore: 89.1, precisionScore: 85.3, recallScore: 84.2 },
-    { id: 6, name: 'LangSmith', type: 'circle', accuracyScore: 88.8, precisionScore: 84.8, recallScore: 83.7 },
-    { id: 7, name: 'HaluEval', type: 'circle', accuracyScore: 83.8, precisionScore: 81.8, recallScore: 83.7 },
+    { 
+      "id": 1, 
+      "name": "DeepEval", 
+      "type": "diamond", 
+      "accuracyScore": 92.8, 
+      "precisionScore": 90.3, 
+      "recallScore": 89.5,
+      "link": "https://docs.confident-ai.com/"
+    },
+    { 
+      "id": 2, 
+      "name": "Ragas", 
+      "type": "circle", 
+      "accuracyScore": 91.9, 
+      "precisionScore": 89.6, 
+      "recallScore": 88.2,
+      "link": "https://docs.ragas.io/en/stable/"
+    },
+    { 
+      "id": 3, 
+      "name": "MLFlow", 
+      "type": "circle", 
+      "accuracyScore": 91.3, 
+      "precisionScore": 88.3, 
+      "recallScore": 87.5,
+      "link": "https://mlflow.org/docs/latest/" 
+    },
+    { 
+      "id": 4, 
+      "name": "TruLens", 
+      "type": "circle", 
+      "accuracyScore": 90.7, 
+      "precisionScore": 87.1, 
+      "recallScore": 86.9,
+      "link": "https://www.trulens.org/" 
+    },
+    { 
+      "id": 5, 
+      "name": "Arize AI Phoenix", 
+      "type": "diamond", 
+      "accuracyScore": 89.1, 
+      "precisionScore": 85.3, 
+      "recallScore": 84.2,
+      "link": "https://docs.arize.com/phoenix" 
+    },
+    { 
+      "id": 6, 
+      "name": "LangSmith", 
+      "type": "circle", 
+      "accuracyScore": 88.8, 
+      "precisionScore": 84.8, 
+      "recallScore": 83.7,
+      "link": "https://docs.smith.langchain.com/" 
+    },
+    { 
+      "id": 7, 
+      "name": "HaluEval", 
+      "type": "circle", 
+      "accuracyScore": 83.8, 
+      "precisionScore": 81.8, 
+      "recallScore": 83.7,
+      "link": "https://github.com/RUCAIBox/HaluEval" 
+    },
   ];
   
   // Filter buttons data
@@ -75,7 +130,7 @@ function App() {
     <div className="app">
       <header className="app-header">
         <div className="logo-container">
-          <img src={logo} alt="Deloitte" className="app-logo" />
+          <img src="/DeloitteLogo.png" alt="Deloitte" className="app-logo" />
         </div>
         <h1>LLM Evaluation Framework Leaderboard</h1>
       </header>
@@ -135,7 +190,7 @@ function App() {
             <tr>
               <th className="rank-col">Rank</th>
               <th className="type-col">Type</th>
-              <th className="model-col">Model</th>
+              <th className="model-col">Framework</th>
               <th className="score-col">Accuracy</th>
               <th className="score-col">Precision</th>
               <th className="score-col">Recall</th>
@@ -151,7 +206,7 @@ function App() {
                 </td>
                 <td className="type-cell">{renderModelType(model.type)}</td>
                 <td className="model-cell">
-                  <a href="#" className="model-link">{model.name}</a>
+                  <a href={model.link} className="model-link">{model.name}</a>
                 </td>
                 <td className="score-cell">
                   <div className="score-wrapper">
