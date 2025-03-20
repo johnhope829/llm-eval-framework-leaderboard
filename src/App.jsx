@@ -19,20 +19,19 @@ function App() {
   
   // Sample data - in a real app, this would come from an API or data source
   const models = [
-    { id: 1, name: 'MaziyarPanahi/calme-3.2-instruct-78b', type: 'diamond', accuracyScore: 92.8, precisionScore: 90.3, recallScore: 89.5 },
-    { id: 2, name: 'MaziyarPanahi/calme-3.1-instruct-78b', type: 'circle', accuracyScore: 91.9, precisionScore: 89.6, recallScore: 88.2 },
-    { id: 3, name: 'dfurman/CalmeRys-78B-Orpo-v0.1', type: 'circle', accuracyScore: 91.3, precisionScore: 88.3, recallScore: 87.5 },
-    { id: 4, name: 'MaziyarPanahi/calme-2.4-rys-78b', type: 'circle', accuracyScore: 90.7, precisionScore: 87.1, recallScore: 86.9 },
-    { id: 5, name: 'huihui-ai/Qwen2.5-72B-Instruct-abliterated', type: 'diamond', accuracyScore: 89.1, precisionScore: 85.3, recallScore: 84.2 },
-    { id: 6, name: 'Qwen/Qwen2.5-72B-Instruct', type: 'circle', accuracyScore: 88.8, precisionScore: 84.8, recallScore: 83.7 },
+    { id: 1, name: 'DeepEval', type: 'diamond', accuracyScore: 92.8, precisionScore: 90.3, recallScore: 89.5 },
+    { id: 2, name: 'Ragas', type: 'circle', accuracyScore: 91.9, precisionScore: 89.6, recallScore: 88.2 },
+    { id: 3, name: 'MLFlow', type: 'circle', accuracyScore: 91.3, precisionScore: 88.3, recallScore: 87.5 },
+    { id: 4, name: 'TruLens', type: 'circle', accuracyScore: 90.7, precisionScore: 87.1, recallScore: 86.9 },
+    { id: 5, name: 'Arize AI Phoenix', type: 'diamond', accuracyScore: 89.1, precisionScore: 85.3, recallScore: 84.2 },
+    { id: 6, name: 'LangSmith', type: 'circle', accuracyScore: 88.8, precisionScore: 84.8, recallScore: 83.7 },
+    { id: 7, name: 'HaluEval', type: 'circle', accuracyScore: 83.8, precisionScore: 81.8, recallScore: 83.7 },
   ];
   
   // Filter buttons data
   const filterGroups = [
-    { name: 'For Edge Devices', count: 786 },
-    { name: 'For Consumers', count: 430 },
-    { name: 'Mid-range', count: 3185 },
-    { name: 'For the GPU-rich', count: 165 },
+    { name: 'LLM-As-A-Judge', count: 7 },
+    { name: 'NLP Metrics', count: 6 },
   ];
   
   const [selectedFilters, setSelectedFilters] = useState([]);
@@ -91,7 +90,7 @@ function App() {
               </button>
             ))}
             <label className="checkbox-filter">
-              <input type="checkbox" /> Only Official Providers · 470
+              <input type="checkbox" /> Only Official Providers · 10
             </label>
           </div>
         </div>
