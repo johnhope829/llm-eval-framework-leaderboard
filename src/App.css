@@ -322,27 +322,17 @@
 }
 
 .logo-container {
-  height: 40px;  /* Change this to adjust height */
-  width: 40px;   /* Change this to adjust width */
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 20px; /* Set a specific height */
+  width: auto;   /* Maintain aspect ratio */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* If you want to maintain the aspect ratio but set a specific width */
-.logo-container {
-  height: auto;
-  width: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* If you want to maintain the aspect ratio but set a specific height */
-.logo-container {
-  height: 40px;
-  width: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.logo-container img {
+  max-height: 100%;
+  max-width: 100%;
 }
