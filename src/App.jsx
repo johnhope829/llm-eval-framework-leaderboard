@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import logo from './DeloitteLogo.png';
 
 function App() {
   const [activeTab, setActiveTab] = useState('Response Accuracy');
@@ -73,6 +74,9 @@ function App() {
   return (
     <div className="app">
       <header className="app-header">
+        <div className="logo-container">
+          <img src={logo} alt="Deloitte" className="app-logo" />
+        </div>
         <h1>LLM Evaluation Framework Leaderboard</h1>
       </header>
       
@@ -148,9 +152,6 @@ function App() {
                 <td className="type-cell">{renderModelType(model.type)}</td>
                 <td className="model-cell">
                   <a href="#" className="model-link">{model.name}</a>
-                  <button className="copy-button">
-                    <span className="copy-icon">⊟</span>
-                  </button>
                 </td>
                 <td className="score-cell">
                   <div className="score-wrapper">

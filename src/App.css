@@ -320,3 +320,29 @@
     font-size: 13px;
   }
 }
+
+.logo-container {
+  height: 40px;  /* Change this to adjust height */
+  width: 40px;   /* Change this to adjust width */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* If you want to maintain the aspect ratio but set a specific width */
+.logo-container {
+  height: auto;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* If you want to maintain the aspect ratio but set a specific height */
+.logo-container {
+  height: 40px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
