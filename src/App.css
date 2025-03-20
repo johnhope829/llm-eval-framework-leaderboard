@@ -258,7 +258,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 8px;
+  padding: 6px;
 }
 
 .model-link {
@@ -328,7 +328,7 @@
   position: absolute;
   top: 10px;
   left: 10px;
-  height: 20px; /* Set a specific height */
+  height: 30px; /* Set a specific height */
   width: auto;   /* Maintain aspect ratio */
   display: flex;
   align-items: center;
