@@ -258,11 +258,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 8px;
 }
 
 .model-link {
   color: #0066cc;
   text-decoration: none;
+  display: inline-block;
+  width: 100%;
 }
 
 .model-link:hover {
